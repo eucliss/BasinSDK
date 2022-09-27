@@ -1,0 +1,24 @@
+[BasinSDK]
+
+- [Wallets]
+    discordName
+    steamId
+    address
+    key
+    privateKey
+    balance
+    wins
+    losses
+
+- [Tournaments]
+    creator
+    participants - discordName[]
+    id
+    status
+    winners  - {first, second, third}
+        - steam_id (steam player ID)
+        - place (place int)
+        - game_player_id (ID for Arena)
+        - username (steam name)
+    matchId
+

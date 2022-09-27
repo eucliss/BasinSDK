@@ -1,0 +1,1597 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "channelId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address[]",
+          "name": "recipients",
+          "type": "address[]"
+        },
+        {
+          "components": [
+            {
+              "internalType": "enum ItemType",
+              "name": "itemType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "identifier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct PackageItem[]",
+          "name": "packages",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "cancelChannel",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "channelId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address[]",
+          "name": "recipients",
+          "type": "address[]"
+        },
+        {
+          "components": [
+            {
+              "internalType": "enum ItemType",
+              "name": "itemType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "identifier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct PackageItem[]",
+          "name": "packages",
+          "type": "tuple[]"
+        },
+        {
+          "internalType": "enum Status",
+          "name": "newStatus",
+          "type": "uint8"
+        }
+      ],
+      "name": "changeChannelStatus",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "recipients",
+          "type": "address[]"
+        },
+        {
+          "components": [
+            {
+              "internalType": "enum ItemType",
+              "name": "itemType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "identifier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct PackageItem[]",
+          "name": "packages",
+          "type": "tuple[]"
+        },
+        {
+          "internalType": "address",
+          "name": "controller",
+          "type": "address"
+        }
+      ],
+      "name": "createChannel",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "channelId",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "recipients",
+          "type": "address[]"
+        },
+        {
+          "components": [
+            {
+              "internalType": "enum ItemType",
+              "name": "itemType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "identifier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct PackageItem[]",
+          "name": "packages",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "deliverPackages",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "channelId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address[]",
+          "name": "recipients",
+          "type": "address[]"
+        },
+        {
+          "components": [
+            {
+              "internalType": "enum ItemType",
+              "name": "itemType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "identifier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct PackageItem[]",
+          "name": "packages",
+          "type": "tuple[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "recipientIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "packageIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "recieverStillEligible",
+          "type": "bool"
+        }
+      ],
+      "name": "distributeToRecipient",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "channelId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getChannelStatus",
+      "outputs": [
+        {
+          "internalType": "enum Status",
+          "name": "stat",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "newBeneficiary",
+          "type": "address"
+        }
+      ],
+      "name": "setBeneficiary",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "setProtocolFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "toggleFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdrawFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "cancelChannel(uint256,address[],(uint8,address,uint256,uint256)[])": "67c7257e",
+    "changeChannelStatus(uint256,address[],(uint8,address,uint256,uint256)[],uint8)": "de89e4f0",
+    "createChannel(address[],(uint8,address,uint256,uint256)[],address)": "8477e61b",
+    "deliverPackages(address[],(uint8,address,uint256,uint256)[])": "d5f91b6a",
+    "distributeToRecipient(uint256,address[],(uint8,address,uint256,uint256)[],uint256,uint256,bool)": "8ead62e2",
+    "getChannelStatus(uint256)": "c3edbc04",
+    "setBeneficiary(address)": "1c31f710",
+    "setProtocolFee(uint256)": "787dce3d",
+    "toggleFee()": "5e209363",
+    "withdrawFee()": "e941fa78"
+  },
+  "ast": {
+    "absolutePath": "src/contracts/interfaces/IBasin.sol",
+    "id": 22131,
+    "exportedSymbols": {
+      "ChannelStruct": [
+        22158
+      ],
+      "IBasin": [
+        22130
+      ],
+      "ItemType": [
+        22138
+      ],
+      "PackageItem": [
+        22186
+      ],
+      "Status": [
+        22142
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "45:6939:16",
+    "nodes": [
+      {
+        "id": 22018,
+        "nodeType": "PragmaDirective",
+        "src": "45:23:16",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 22023,
+        "nodeType": "ImportDirective",
+        "src": "97:96:16",
+        "absolutePath": "src/contracts/lib/StructsAndEnums.sol",
+        "file": "@contracts/lib/StructsAndEnums.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 22131,
+        "sourceUnit": 22199,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 22019,
+              "name": "ChannelStruct",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 22158,
+              "src": "105:13:16",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 22020,
+              "name": "Status",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 22142,
+              "src": "120:6:16",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 22021,
+              "name": "PackageItem",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 22186,
+              "src": "128:11:16",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 22022,
+              "name": "ItemType",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 22138,
+              "src": "141:8:16",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 22130,
+        "nodeType": "ContractDefinition",
+        "src": "287:6696:16",
+        "nodes": [
+          {
+            "id": 22039,
+            "nodeType": "FunctionDefinition",
+            "src": "1568:182:16",
+            "documentation": {
+              "id": 22025,
+              "nodeType": "StructuredDocumentation",
+              "src": "310:1253:16",
+              "text": " @notice Primary functionality of Basin. This function allows you to create a new channel to distribute assets.\n         The function will charge the protocolFee if feeEnabled is set to true. The function transfers all input packages\n         to this contract for holding until they're distributed. A new channel is then created and mappings are updated\n         with all the new information and hashes. The channel contract is then initialized and ready for distribution.\n         The outcome is a new Channel contract with its own address and Basin having ownership of all package items taken as\n         input. The channel can be canceled while its status is still in Open, but when the status is switched to Started\n         the assets will only be deliverable to the recipients in the channel. This function is externally facing and requires\n         payment and depositting of assets.\n @param recipients Addresses of the valid recipients in a channel.\n @param packages PackageItem array of digital assets to be distributed in a channel.\n @param controller Address of who will be controlling the channel.\n @return channelId ID of the channel created."
+            },
+            "functionSelector": "8477e61b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createChannel",
+            "nameLocation": "1577:13:16",
+            "parameters": {
+              "id": 22035,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22028,
+                  "mutability": "mutable",
+                  "name": "recipients",
+                  "nameLocation": "1619:10:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22039,
+                  "src": "1600:29:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22026,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1600:7:16",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 22027,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1600:9:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22032,
+                  "mutability": "mutable",
+                  "name": "packages",
+                  "nameLocation": "1662:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22039,
+                  "src": "1639:31:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_PackageItem_$22186_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct PackageItem[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22030,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 22029,
+                        "name": "PackageItem",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 22186,
+                        "src": "1639:11:16"
+                      },
+                      "referencedDeclaration": 22186,
+                      "src": "1639:11:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_PackageItem_$22186_storage_ptr",
+                        "typeString": "struct PackageItem"
+                      }
+                    },
+                    "id": 22031,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1639:13:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_PackageItem_$22186_storage_$dyn_storage_ptr",
+                      "typeString": "struct PackageItem[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22034,
+                  "mutability": "mutable",
+                  "name": "controller",
+                  "nameLocation": "1688:10:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22039,
+                  "src": "1680:18:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22033,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1680:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1590:114:16"
+            },
+            "returnParameters": {
+              "id": 22038,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22037,
+                  "mutability": "mutable",
+                  "name": "channelId",
+                  "nameLocation": "1739:9:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22039,
+                  "src": "1731:17:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22036,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1731:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1730:19:16"
+            },
+            "scope": 22130,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22052,
+            "nodeType": "FunctionDefinition",
+            "src": "2404:145:16",
+            "documentation": {
+              "id": 22040,
+              "nodeType": "StructuredDocumentation",
+              "src": "1756:643:16",
+              "text": " @notice This function acts as a safety net for the creator of a channel. Before the channel is started, the\n         controller of the channel has the ability to cancel it and return all the assets Basin controls back to them.\n         This is the only time the user can withdraw items from a channel unless they're delivering the package to the\n         recipient.\n @param channelId Address of the channel being executed.\n @param recipients Addresses of the valid recipients in a channel.\n @param packages PackageItem array of digital assets to be distributed in a channel."
+            },
+            "functionSelector": "67c7257e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cancelChannel",
+            "nameLocation": "2413:13:16",
+            "parameters": {
+              "id": 22050,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22042,
+                  "mutability": "mutable",
+                  "name": "channelId",
+                  "nameLocation": "2444:9:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22052,
+                  "src": "2436:17:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22041,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2436:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22045,
+                  "mutability": "mutable",
+                  "name": "recipients",
+                  "nameLocation": "2482:10:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22052,
+                  "src": "2463:29:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22043,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2463:7:16",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 22044,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2463:9:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22049,
+                  "mutability": "mutable",
+                  "name": "packages",
+                  "nameLocation": "2525:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22052,
+                  "src": "2502:31:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_PackageItem_$22186_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct PackageItem[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22047,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 22046,
+                        "name": "PackageItem",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 22186,
+                        "src": "2502:11:16"
+                      },
+                      "referencedDeclaration": 22186,
+                      "src": "2502:11:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_PackageItem_$22186_storage_ptr",
+                        "typeString": "struct PackageItem"
+                      }
+                    },
+                    "id": 22048,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2502:13:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_PackageItem_$22186_storage_$dyn_storage_ptr",
+                      "typeString": "struct PackageItem[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2426:113:16"
+            },
+            "returnParameters": {
+              "id": 22051,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2548:0:16"
+            },
+            "scope": 22130,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22071,
+            "nodeType": "FunctionDefinition",
+            "src": "4155:251:16",
+            "documentation": {
+              "id": 22053,
+              "nodeType": "StructuredDocumentation",
+              "src": "2555:1595:16",
+              "text": " @notice This function distributes a package to a recipient. The function first determines if the\n         given inputs hash to a valid channel, which would confirm the packages and recipients are valid.\n         The function then uses indexes for recipients and packages instead of taking addresses which\n         forces the reciever to be valid in the channel, and also forces the package to be one which is\n         already deposited. The function also sets if the reciever of the package is still eligible on\n         the channel contract. This flag allows a single recipient to recieve multiple packages, or be\n         restricted to a single package. The function calls _pairRecipientWithPackage which alters the\n         storage on the channel contract to confirm distribution of a package and reception from a recipient.\n         The function then distributes the package which protects against re-entrancy. Then the function\n         transfers the package from Basin to the recipient.\n @param channelId ID of the channel to process.\n @param recipients Addresses of the valid recipients in a channel.\n @param packages PackageItem array of digital assets to be distributed in a channel.\n @param recipientIndex Index in the recipients array to deliver the package to.\n @param packageIndex Index in the package array to determine which package to deliver.\n @param recieverStillEligible Bool to set on the Channel contract to block a user from recieveing more packages."
+            },
+            "functionSelector": "8ead62e2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "distributeToRecipient",
+            "nameLocation": "4164:21:16",
+            "parameters": {
+              "id": 22069,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22055,
+                  "mutability": "mutable",
+                  "name": "channelId",
+                  "nameLocation": "4203:9:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22071,
+                  "src": "4195:17:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22054,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4195:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22058,
+                  "mutability": "mutable",
+                  "name": "recipients",
+                  "nameLocation": "4241:10:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22071,
+                  "src": "4222:29:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22056,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "4222:7:16",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 22057,
+                    "nodeType": "ArrayTypeName",
+                    "src": "4222:9:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22062,
+                  "mutability": "mutable",
+                  "name": "packages",
+                  "nameLocation": "4284:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22071,
+                  "src": "4261:31:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_PackageItem_$22186_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct PackageItem[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22060,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 22059,
+                        "name": "PackageItem",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 22186,
+                        "src": "4261:11:16"
+                      },
+                      "referencedDeclaration": 22186,
+                      "src": "4261:11:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_PackageItem_$22186_storage_ptr",
+                        "typeString": "struct PackageItem"
+                      }
+                    },
+                    "id": 22061,
+                    "nodeType": "ArrayTypeName",
+                    "src": "4261:13:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_PackageItem_$22186_storage_$dyn_storage_ptr",
+                      "typeString": "struct PackageItem[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22064,
+                  "mutability": "mutable",
+                  "name": "recipientIndex",
+                  "nameLocation": "4310:14:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22071,
+                  "src": "4302:22:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22063,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4302:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22066,
+                  "mutability": "mutable",
+                  "name": "packageIndex",
+                  "nameLocation": "4342:12:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22071,
+                  "src": "4334:20:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22065,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4334:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22068,
+                  "mutability": "mutable",
+                  "name": "recieverStillEligible",
+                  "nameLocation": "4369:21:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22071,
+                  "src": "4364:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 22067,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4364:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4185:211:16"
+            },
+            "returnParameters": {
+              "id": 22070,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4405:0:16"
+            },
+            "scope": 22130,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22087,
+            "nodeType": "FunctionDefinition",
+            "src": "5025:177:16",
+            "documentation": {
+              "id": 22072,
+              "nodeType": "StructuredDocumentation",
+              "src": "4412:608:16",
+              "text": " @notice This function changes the status of a Channel. The status are Open, Started, and Completed.\n         The channel status can progress from Open -> Started -> Completed, this is the only way\n         the statuses can progress. The channel contract asserts this progression.\n @param channelId ID of the channel to process.\n @param recipients Addresses of the valid recipients in a channel.\n @param packages PackageItem array of digital assets to be distributed in a channel.\n @param newStatus Status enum value to set for the channel."
+            },
+            "functionSelector": "de89e4f0",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "changeChannelStatus",
+            "nameLocation": "5034:19:16",
+            "parameters": {
+              "id": 22085,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22074,
+                  "mutability": "mutable",
+                  "name": "channelId",
+                  "nameLocation": "5071:9:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22087,
+                  "src": "5063:17:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22073,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5063:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22077,
+                  "mutability": "mutable",
+                  "name": "recipients",
+                  "nameLocation": "5109:10:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22087,
+                  "src": "5090:29:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22075,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "5090:7:16",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 22076,
+                    "nodeType": "ArrayTypeName",
+                    "src": "5090:9:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22081,
+                  "mutability": "mutable",
+                  "name": "packages",
+                  "nameLocation": "5152:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22087,
+                  "src": "5129:31:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_PackageItem_$22186_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct PackageItem[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22079,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 22078,
+                        "name": "PackageItem",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 22186,
+                        "src": "5129:11:16"
+                      },
+                      "referencedDeclaration": 22186,
+                      "src": "5129:11:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_PackageItem_$22186_storage_ptr",
+                        "typeString": "struct PackageItem"
+                      }
+                    },
+                    "id": 22080,
+                    "nodeType": "ArrayTypeName",
+                    "src": "5129:13:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_PackageItem_$22186_storage_$dyn_storage_ptr",
+                      "typeString": "struct PackageItem[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22084,
+                  "mutability": "mutable",
+                  "name": "newStatus",
+                  "nameLocation": "5177:9:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22087,
+                  "src": "5170:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Status_$22142",
+                    "typeString": "enum Status"
+                  },
+                  "typeName": {
+                    "id": 22083,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 22082,
+                      "name": "Status",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 22142,
+                      "src": "5170:6:16"
+                    },
+                    "referencedDeclaration": 22142,
+                    "src": "5170:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Status_$22142",
+                      "typeString": "enum Status"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5053:139:16"
+            },
+            "returnParameters": {
+              "id": 22086,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5201:0:16"
+            },
+            "scope": 22130,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22091,
+            "nodeType": "FunctionDefinition",
+            "src": "5313:30:16",
+            "documentation": {
+              "id": 22088,
+              "nodeType": "StructuredDocumentation",
+              "src": "5208:100:16",
+              "text": " @notice Toggle is feeEnabled is true or false, only called by beneficiary."
+            },
+            "functionSelector": "5e209363",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "toggleFee",
+            "nameLocation": "5322:9:16",
+            "parameters": {
+              "id": 22089,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5331:2:16"
+            },
+            "returnParameters": {
+              "id": 22090,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5342:0:16"
+            },
+            "scope": 22130,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22097,
+            "nodeType": "FunctionDefinition",
+            "src": "5649:65:16",
+            "documentation": {
+              "id": 22092,
+              "nodeType": "StructuredDocumentation",
+              "src": "5349:295:16",
+              "text": " @notice This function allows for the changing of the beneficiary. Only the beneficiary can\n         call this function. The beneficiary is the address which recieves the fees.\n @param newBeneficiary Address of the new beneficiary to recieve the fees."
+            },
+            "functionSelector": "1c31f710",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setBeneficiary",
+            "nameLocation": "5658:14:16",
+            "parameters": {
+              "id": 22095,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22094,
+                  "mutability": "mutable",
+                  "name": "newBeneficiary",
+                  "nameLocation": "5689:14:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22097,
+                  "src": "5673:30:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 22093,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5673:15:16",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5672:32:16"
+            },
+            "returnParameters": {
+              "id": 22096,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5713:0:16"
+            },
+            "scope": 22130,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22103,
+            "nodeType": "FunctionDefinition",
+            "src": "5890:49:16",
+            "documentation": {
+              "id": 22098,
+              "nodeType": "StructuredDocumentation",
+              "src": "5720:165:16",
+              "text": " @notice This function sets the protocolFee which is paid out to the beneficiary.\n @param newFee New uint256 value for the fee."
+            },
+            "functionSelector": "787dce3d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setProtocolFee",
+            "nameLocation": "5899:14:16",
+            "parameters": {
+              "id": 22101,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22100,
+                  "mutability": "mutable",
+                  "name": "newFee",
+                  "nameLocation": "5922:6:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22103,
+                  "src": "5914:14:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22099,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5914:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5913:16:16"
+            },
+            "returnParameters": {
+              "id": 22102,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5938:0:16"
+            },
+            "scope": 22130,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22107,
+            "nodeType": "FunctionDefinition",
+            "src": "6158:32:16",
+            "documentation": {
+              "id": 22104,
+              "nodeType": "StructuredDocumentation",
+              "src": "5945:208:16",
+              "text": " @notice This function allows for the withdrawing of the fees collected by the protocol.\n         This function is callable by anyone, but only sends the fees to the beneficiary"
+            },
+            "functionSelector": "e941fa78",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawFee",
+            "nameLocation": "6167:11:16",
+            "parameters": {
+              "id": 22105,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6178:2:16"
+            },
+            "returnParameters": {
+              "id": 22106,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6189:0:16"
+            },
+            "scope": 22130,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22120,
+            "nodeType": "FunctionDefinition",
+            "src": "6655:143:16",
+            "documentation": {
+              "id": 22108,
+              "nodeType": "StructuredDocumentation",
+              "src": "6196:454:16",
+              "text": " @notice This function will deliver a set of packages to a set of recipients 1:1.\n         The length of the recipients and the length of the packages must be the same.\n         Package[0] will be delivered to recipient[0], package[1] - recipient[1], and\n         so on. This function does not create a channel, this is a single execution\n         function. All ItemTypes are valid (ETH, ERC20, ERC721, ERC1155)."
+            },
+            "functionSelector": "d5f91b6a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deliverPackages",
+            "nameLocation": "6664:15:16",
+            "parameters": {
+              "id": 22116,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22111,
+                  "mutability": "mutable",
+                  "name": "recipients",
+                  "nameLocation": "6708:10:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22120,
+                  "src": "6689:29:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22109,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "6689:7:16",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 22110,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6689:9:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22115,
+                  "mutability": "mutable",
+                  "name": "packages",
+                  "nameLocation": "6751:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22120,
+                  "src": "6728:31:16",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_PackageItem_$22186_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct PackageItem[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22113,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 22112,
+                        "name": "PackageItem",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 22186,
+                        "src": "6728:11:16"
+                      },
+                      "referencedDeclaration": 22186,
+                      "src": "6728:11:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_PackageItem_$22186_storage_ptr",
+                        "typeString": "struct PackageItem"
+                      }
+                    },
+                    "id": 22114,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6728:13:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_PackageItem_$22186_storage_$dyn_storage_ptr",
+                      "typeString": "struct PackageItem[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6679:86:16"
+            },
+            "returnParameters": {
+              "id": 22119,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22118,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22120,
+                  "src": "6792:4:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 22117,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6792:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6791:6:16"
+            },
+            "scope": 22130,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22129,
+            "nodeType": "FunctionDefinition",
+            "src": "6876:105:16",
+            "documentation": {
+              "id": 22121,
+              "nodeType": "StructuredDocumentation",
+              "src": "6804:67:16",
+              "text": " @notice Get the status of a given Channel"
+            },
+            "functionSelector": "c3edbc04",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getChannelStatus",
+            "nameLocation": "6885:16:16",
+            "parameters": {
+              "id": 22124,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22123,
+                  "mutability": "mutable",
+                  "name": "channelId",
+                  "nameLocation": "6910:9:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22129,
+                  "src": "6902:17:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22122,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6902:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6901:19:16"
+            },
+            "returnParameters": {
+              "id": 22128,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22127,
+                  "mutability": "mutable",
+                  "name": "stat",
+                  "nameLocation": "6975:4:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22129,
+                  "src": "6968:11:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Status_$22142",
+                    "typeString": "enum Status"
+                  },
+                  "typeName": {
+                    "id": 22126,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 22125,
+                      "name": "Status",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 22142,
+                      "src": "6968:6:16"
+                    },
+                    "referencedDeclaration": 22142,
+                    "src": "6968:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Status_$22142",
+                      "typeString": "enum Status"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6967:13:16"
+            },
+            "scope": 22130,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IBasin",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 22024,
+          "nodeType": "StructuredDocumentation",
+          "src": "195:91:16",
+          "text": " @title IBasin\n @author waint.eth\n @notice This is the interface to Basin.sol"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          22130
+        ],
+        "name": "IBasin",
+        "nameLocation": "297:6:16",
+        "scope": 22131,
+        "usedErrors": []
+      }
+    ],
+    "license": "GPL-3.0-or-later"
+  },
+  "id": 16
+}
